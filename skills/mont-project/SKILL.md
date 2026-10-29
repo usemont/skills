@@ -6,12 +6,14 @@ license: Apache-2.0
 
 # Native Mont project editing
 
-Use an authorized, existing `mont` executable. There is no generally downloadable
-binary promised by this skill. The recipe targets the **developer-preview
-contract `mont 0.1.0-preview.1`**, not a stable public release or compatibility
-range. Run the chosen executable's `--version` and `--help` first; stop if its
+Use an authorized `mont` executable. The signed, Apple-notarized
+[official preview](https://github.com/usemont/mont-cli/releases/tag/v0.1.0-preview.1)
+is available for Apple Silicon (ARM64), macOS 14 or newer, through
+`brew install usemont/tap/mont`. The recipe requires the **developer-preview
+contract `mont 0.1.0-preview.1`**, not a stable release or compatibility range.
+Run the chosen executable's `--version` and `--help` first; stop if its
 identity/commands differ. Do not install unsigned evaluation artifacts, bypass
-Gatekeeper, or download a substitute executable automatically.
+Gatekeeper, or download or install an executable without the user's approval.
 
 This workflow edits native JSON project values, registers originals, and bundles
 projects. **It does not render MP4, compose a timeline, decode media, or provide
