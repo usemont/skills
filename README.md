@@ -7,17 +7,21 @@ directory, not MP4. No Flutter/mobile project interoperability is promised.
 
 ## Availability
 
-This skill is usable only with an authorized existing Mont CLI. **There is no
-generally downloadable binary available through this repository.** It contains
-no executable distribution, SDK, installer, Homebrew formula, or private source.
-The current recipe targets the explicit developer-preview identity
-`mont 0.1.0-preview.1`; this is not a stable public minimum-version promise.
+The signed and Apple-notarized **Mont CLI 0.1.0-preview.1** is available for
+**Apple Silicon (ARM64), macOS 14 or newer**:
 
-Check your executable with `mont --version` and `mont --help`. The recipe refuses
-another identity rather than guessing compatibility. Obtain binaries through an
-authorized channel; public binary distribution remains gated on approved terms,
-Developer ID signing, notarization, and release acceptance. Never bypass platform
-security or redistribute an internal evaluation executable.
+```sh
+brew install usemont/tap/mont
+```
+
+See the [official release](https://github.com/usemont/mont-cli/releases/tag/v0.1.0-preview.1)
+for the archive, checksums, and proprietary Nauchu AB preview terms. This skills
+repository contains no executable distribution, SDK, or private source.
+
+Check your executable with `mont --version` and `mont --help`. The recipe requires
+the exact identity `mont 0.1.0-preview.1`, not a stable compatibility range; it
+refuses another identity rather than guessing. Use only official signed releases;
+never bypass platform security or redistribute an internal evaluation executable.
 
 ## Install the agent skill
 
