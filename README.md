@@ -4,18 +4,18 @@ Teach your agent to edit native Mont videos and render completed MP4s.
 
 <table>
   <tr>
-    <td width="33%"><a href="https://github.com/usemont/awesome-workflows/tree/main/templates/kinetic/stretch-row-repeater"><img src="https://raw.githubusercontent.com/usemont/awesome-workflows/main/assets/previews/stretch-row-repeater-square.gif" alt="Stretch Row Repeater animation" width="100%"></a></td>
-    <td width="33%"><a href="https://github.com/usemont/awesome-workflows/tree/main/templates/kinetic/letter-inflate-swell"><img src="https://raw.githubusercontent.com/usemont/awesome-workflows/main/assets/previews/letter-inflate-swell-square.gif" alt="Letter Inflate Swell animation" width="100%"></a></td>
-    <td width="33%"><a href="https://github.com/usemont/awesome-workflows/tree/main/templates/kinetic/spiral-type"><img src="https://raw.githubusercontent.com/usemont/awesome-workflows/main/assets/previews/spiral-type-square.gif" alt="Spiral Type animation" width="100%"></a></td>
+    <td width="33%"><a href="https://github.com/usemont/workflows/tree/main/templates/kinetic/stretch-row-repeater"><img src="https://raw.githubusercontent.com/usemont/workflows/main/assets/previews/stretch-row-repeater-square.gif" alt="Stretch Row Repeater animation" width="100%"></a></td>
+    <td width="33%"><a href="https://github.com/usemont/workflows/tree/main/templates/kinetic/letter-inflate-swell"><img src="https://raw.githubusercontent.com/usemont/workflows/main/assets/previews/letter-inflate-swell-square.gif" alt="Letter Inflate Swell animation" width="100%"></a></td>
+    <td width="33%"><a href="https://github.com/usemont/workflows/tree/main/templates/kinetic/spiral-type"><img src="https://raw.githubusercontent.com/usemont/workflows/main/assets/previews/spiral-type-square.gif" alt="Spiral Type animation" width="100%"></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/usemont/awesome-workflows/tree/main/templates/kinetic/stretch-row-repeater">Stretch Row Repeater</a></td>
-    <td align="center"><a href="https://github.com/usemont/awesome-workflows/tree/main/templates/kinetic/letter-inflate-swell">Letter Inflate Swell</a></td>
-    <td align="center"><a href="https://github.com/usemont/awesome-workflows/tree/main/templates/kinetic/spiral-type">Spiral Type</a></td>
+    <td align="center"><a href="https://github.com/usemont/workflows/tree/main/templates/kinetic/stretch-row-repeater">Stretch Row Repeater</a></td>
+    <td align="center"><a href="https://github.com/usemont/workflows/tree/main/templates/kinetic/letter-inflate-swell">Letter Inflate Swell</a></td>
+    <td align="center"><a href="https://github.com/usemont/workflows/tree/main/templates/kinetic/spiral-type">Spiral Type</a></td>
   </tr>
 </table>
 
-Native Mont renders · [Templates and workflow quickstart](https://github.com/usemont/awesome-workflows)
+Native Mont renders · [Templates and workflow quickstart](https://github.com/usemont/workflows)
 
 ## Install the skill
 
