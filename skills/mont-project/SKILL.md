@@ -6,7 +6,7 @@ license: Apache-2.0
 
 # Native Mont projects and workflows
 
-Use an authorized **Mont CLI 0.1.0-preview.7 or newer**. Run `mont --version`, `mont --help`, and the relevant subcommand's `--help` before acting. Earlier releases do not resolve named previews from the renamed collection. Install or upgrade only with the user's authorization through the [official distribution](https://github.com/usemont/mont-cli): Homebrew on Apple Silicon/macOS 14+, signed APT on Debian 12 ARM64/amd64. Windows is not a public target yet. Never use an unsigned internal build or bypass platform trust checks.
+Use an authorized **Mont CLI 0.1.0-preview.8 or newer**. Run `mont --version`, `mont --help`, and the relevant subcommand's `--help` before acting. Install or upgrade only with the user's authorization through the [official distribution](https://github.com/usemont/mont-cli): Homebrew on Apple Silicon/macOS 14+, signed APT on Debian 12 ARM64/amd64. Windows is not a public target yet. Never use an unsigned internal build or bypass platform trust checks.
 
 Reusable `.mont` workflows and native templates belong in [usemont/workflows](https://github.com/usemont/workflows), not in this skill. Use Mont's workflow runtime rather than Python orchestration, browser capture, or direct FFmpeg command sequences. FFmpeg/ffprobe are separately installed runtime dependencies; Mont invokes them where needed.
 
@@ -22,30 +22,32 @@ Reusable `.mont` workflows and native templates belong in [usemont/workflows](ht
 
 ## Run a published template
 
-Check out the official workflow collection using an approved new destination. From its root:
+Discover published entries and inspect their settings before rendering:
 
 ```sh
-template=stretch-row-repeater # or letter-inflate-swell / spiral-type
-mont --json -C "$PWD/out/$template" workflow run \
-  "$PWD/templates/kinetic/$template/template.mont" --run-id "$template"
+mont --json templates list
+mont --json templates show stretch-row-repeater
+mont --json -C "/absolute/output-base" templates preview stretch-row-repeater
+mont --json workflows list
+mont --json workflows show explainer
 ```
 
-The workflow creates `project/` and `preview.mp4` under the output base. It performs native scene creation, validation and rendering; no inference key is needed. Use a new output base and run ID for an independent generation. Non-embedded fonts need network access on first use.
+Discovery and use resolve the latest official collection, then pin downloaded assets to one revision. New entries do not require a CLI rebuild or a repository checkout. Template previews retain the editable project and completed MP4 in a fresh directory beneath the output base. Non-embedded fonts need network access on first use.
 
-All three templates accept top-level `width`, `height`, `text`, `workspace`, `output`, and `fps` inputs. Review each template's declared defaults and controls; do not invent fields. Save settings such as `{"width":1080,"height":1920,"text":"MAKE SPACE"}` in a local JSON file and append `--inputs "/absolute/settings.json"`. Use 1920×1080 for landscape, 1080×1920 for portrait, or 1080×1080 for square. Layouts adapt natively; do not stretch a baked video.
+Review each template's declared defaults and controls; do not invent fields. Save settings such as `{"width":1080,"height":1920,"text":"MAKE SPACE"}` in a local JSON file and append `--inputs "/absolute/settings.json"` to `templates preview`. Use 1920×1080 for landscape, 1080×1920 for portrait, or 1080×1080 for square. Layouts adapt natively; do not stretch a baked video.
 
 For narrated explainers, follow the collection's [explainer guide](https://github.com/usemont/workflows/tree/main/workflows/explainer) and configuration example. Preserve its visual-fidelity caveats; execution success does not certify reference pixel identity. Do not promise a free run, fixed provider availability, or automatic approval of visual results.
 
 ## Durable workflow control
 
 ```sh
-mont --json -C "/absolute/output-base" workflow list
-mont --json -C "/absolute/output-base" workflow status RUN_ID
-mont --json -C "/absolute/output-base" workflow cancel RUN_ID
-mont --json -C "/absolute/output-base" workflow resume RUN_ID
+mont --json -C "/absolute/output-base" workflows runs
+mont --json -C "/absolute/output-base" workflows status RUN_ID
+mont --json -C "/absolute/output-base" workflows cancel RUN_ID
+mont --json -C "/absolute/output-base" workflows resume RUN_ID
 ```
 
-Run accepts `--inputs`, `--config`, and `--run-id`. Resume uses frozen definitions, inputs and configuration from `.mont-workflows`; editing a source file does not change an existing run. Reusing an ID with different content is rejected. Inspect a failed run before any retry; do not delete its journal or silently charge for a new generation.
+`workflows run <published-name-or-local-file>` accepts `--inputs`, `--config`, and `--run-id`. Review published workflows before execution; provider-backed flows may incur charges. Resume uses frozen definitions, inputs and configuration from `.mont-workflows`; editing a source file does not change an existing run. Reusing an ID with different content is rejected. Inspect a failed run before any retry; do not delete its journal or silently charge for a new generation.
 
 ## Native project edits
 
