@@ -8,7 +8,7 @@ license: Apache-2.0
 
 Use an authorized **Mont CLI 0.1.0-preview.5 or newer**. Run `mont --version`, `mont --help`, and the relevant subcommand's `--help` before acting. Older public releases do not implement `mont workflow`. Install or upgrade only with the user's authorization through the [official distribution](https://github.com/usemont/mont-cli): Homebrew on Apple Silicon/macOS 14+, signed APT on Debian 12 ARM64/amd64. Windows is not a public target yet. Never use an unsigned internal build or bypass platform trust checks.
 
-Reusable `.mont` workflows and native templates belong in [usemont/workflows](https://github.com/usemont/workflows), not in this skill. Use Mont's workflow runtime rather than Python orchestration, browser capture, or direct FFmpeg command sequences. FFmpeg/ffprobe are separately installed runtime dependencies; Mont invokes them where needed.
+Reusable `.mont` workflows and native templates belong in [usemont/awesome-workflows](https://github.com/usemont/awesome-workflows), not in this skill. Use Mont's workflow runtime rather than Python orchestration, browser capture, or direct FFmpeg command sequences. FFmpeg/ffprobe are separately installed runtime dependencies; Mont invokes them where needed.
 
 ## Safety and ownership
 
@@ -34,7 +34,7 @@ The workflow creates `project/` and `preview.mp4` under the output base. It perf
 
 All three templates accept top-level `width`, `height`, `text`, `workspace`, `output`, and `fps` inputs. Review each template's declared defaults and controls; do not invent fields. Save settings such as `{"width":1080,"height":1920,"text":"MAKE SPACE"}` in a local JSON file and append `--inputs "/absolute/settings.json"`. Use 1920×1080 for landscape, 1080×1920 for portrait, or 1080×1080 for square. Layouts adapt natively; do not stretch a baked video.
 
-For narrated explainers, follow the collection's [explainer guide](https://github.com/usemont/workflows/tree/main/workflows/explainer) and configuration example. Preserve its visual-fidelity caveats; execution success does not certify reference pixel identity. Do not promise a free run, fixed provider availability, or automatic approval of visual results.
+For narrated explainers, follow the collection's [explainer guide](https://github.com/usemont/awesome-workflows/tree/main/workflows/explainer) and configuration example. Preserve its visual-fidelity caveats; execution success does not certify reference pixel identity. Do not promise a free run, fixed provider availability, or automatic approval of visual results.
 
 ## Durable workflow control
 
