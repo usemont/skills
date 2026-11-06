@@ -1,3 +1,5 @@
+<p><a href="https://usemont.com"><img src="assets/logo.svg" alt="Mont" width="150" height="40"></a></p>
+
 # Mont agent skills
 
 Teach your agent to edit native Mont videos and render completed MP4s.
